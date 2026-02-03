@@ -13,6 +13,6 @@
 ## 🛠 Установка
 
 ```bash
-git clone [https://github.com/твой-логин/hxppy-archivator.git](https://github.com/твой-логин/hxppy-archivator.git)
+git clone [https://github.com/HxppyCompany/hxppy-archivator.git](https://github.com/HxppyCompany/hxppy-archivator.git)
 cd hxppy-archivator
 pip install -e .
