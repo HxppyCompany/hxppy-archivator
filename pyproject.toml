@@ -7,11 +7,10 @@ name = "hxppy-archivator"
 version = "1.0.2"
 description = "CLI-утилита для упаковки исходного кода в текстовый файл и его последующей распаковки."
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 license = "MIT"
 classifiers = [
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
