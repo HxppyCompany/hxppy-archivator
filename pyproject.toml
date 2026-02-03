@@ -5,10 +5,11 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "hxppy-archivator"
 version = "0.1.0"
-description = "Просто CLI утилита для упаковки и распаковки проекта для работы с LLM"
-dependencies = [
-    "pathspec",
-]
+description = "CLI-утилита для упаковки исходного кода в текстовый файл и его последующей распаковки."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+dependencies = ["rich", "pathspec"]
 
 [project.scripts]
 hxppy = "hxppy:main"
