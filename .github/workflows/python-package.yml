@@ -12,29 +12,30 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # Добавил 3.8 и 3.12, как в твоем pyproject.toml
-        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
+        # Теперь тестируем только актуальные и поддерживаемые версии
+        python-version: ["3.9", "3.10", "3.11", "3.12"]
 
     steps:
     - uses: actions/checkout@v4
     
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: ${{ matrix.python-version }}
         
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
+        python -m pip install --upgrade setuptools wheel build
         python -m pip install flake8 pytest
-        # Устанавливаем сам пакет и его зависимости (rich, pathspec)
+        # Устанавливаем пакет и его зависимости
         pip install .
         
     - name: Lint with flake8
       run: |
-        # Останавливаем сборку при критических ошибках
+        # Остановка при синтаксических ошибках
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # Выводим предупреждения (не ломает сборку)
+        # Вывод предупреждений (не ломает сборку)
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
         
     - name: Test with pytest
