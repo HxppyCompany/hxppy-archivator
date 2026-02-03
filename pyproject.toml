@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hxppy-archivator"
+version = "0.1.0"
+description = "Просто CLI утилита для упаковки и распаковки проекта для работы с LLM"
+dependencies = [
+    "pathspec",
+]
+
+[project.scripts]
+hxppy = "hxppy:main"
