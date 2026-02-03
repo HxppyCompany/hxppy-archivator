@@ -29,7 +29,7 @@ pip install hxppy-archivator
 Чтобы собрать все файлы текущей папки в один файл `context.txt`:
 
 ```bash
-hxppy pack context.txt
+hxppy pack -f context.txt
 
 ```
 
@@ -38,7 +38,7 @@ hxppy pack context.txt
 Чтобы восстановить файлы из архива:
 
 ```bash
-hxppy unpack context.txt
+hxppy unpack -f context.txt
 
 ```
 
